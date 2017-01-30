@@ -1,0 +1,524 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E346F036-0921-452C-9FE3-025F9AED8533}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PowerDebug</RootNamespace>
+    <AssemblyName>PowerDebug</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>E:\test\PowerDebug\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>4</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>IntelICON.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>FEFB3369556A1374B7E421CFA3FF8C92C17B04D4</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>PowerDebug_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EPPlus">
+      <HintPath>..\..\..\Final Code\PowerDebug (UI Update)\PowerDebug\bin\Debug\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\..\..\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.Excel\14.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="OxyPlot">
+      <HintPath>packages\OxyPlot.2014.1.546\lib\OxyPlot.dll</HintPath>
+    </Reference>
+    <Reference Include="OxyPlot.WindowsForms">
+      <HintPath>packages\OxyPlot.2014.1.546\lib\net40\OxyPlot.WindowsForms.dll</HintPath>
+    </Reference>
+    <Reference Include="OxyPlot.Wpf, Version=2014.1.546.0, Culture=neutral, PublicKeyToken=75e952ba404cdbb0, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\OxyPlot.Wpf.2014.1.546\lib\net45\OxyPlot.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="OxyPlot.Xps, Version=2014.1.546.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\OxyPlot.Wpf.2014.1.546\lib\net45\OxyPlot.Xps.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Controls.Input.Toolkit">
+      <HintPath>packages\WPFToolkit.3.5.50211.1\lib\System.Windows.Controls.Input.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Controls.Layout.Toolkit">
+      <HintPath>packages\WPFToolkit.3.5.50211.1\lib\System.Windows.Controls.Layout.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Serialization" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="WPFToolkit">
+      <HintPath>packages\WPFToolkit.3.5.50211.1\lib\WPFToolkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="AOSCpuutil.xaml.cs">
+      <DependentUpon>AOSCpuutil.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GridControl.xaml.cs">
+      <DependentUpon>GridControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Gridcontrol2.xaml.cs">
+      <DependentUpon>Gridcontrol2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GridcontrolAR.xaml.cs">
+      <DependentUpon>GridcontrolAR.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GridcontrolAR2.xaml.cs">
+      <DependentUpon>GridcontrolAR2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GridcontrolUTIL.xaml.cs">
+      <DependentUpon>GridcontrolUTIL.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GridcontrolUTIL2.xaml.cs">
+      <DependentUpon>GridcontrolUTIL2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modemcpuutil.xaml.cs">
+      <DependentUpon>Modemcpuutil.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VMCS.xaml.cs">
+      <DependentUpon>VMCS.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VmmOverhead.xaml.cs">
+      <DependentUpon>VmmOverhead.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WriteCsv.cs" />
+    <Page Include="AOSCpuutil.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GridControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Gridcontrol2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GridcontrolAR.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GridcontrolAR2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GridcontrolUTIL.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GridcontrolUTIL2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Modemcpuutil.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VMCS.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VmmOverhead.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="PowerDebug_TemporaryKey.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\download %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\atom1024x600.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\download.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\images %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\download %281%291.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\backdrop-blue-technology-gear.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\minimalistic_dark_grey_textures_gradient_2000x1200_wallpaper_Wallpaper_1280x1024_www.wallpaperswa.com.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\download %282%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\download %283%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\download %284%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\download %285%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\buttonyfu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\greyButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\glossy_button_blank_green_circle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\download %286%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\images %282%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\images %283%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\download %287%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\classic_blue_magnifying_glass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\download %288%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\images %284%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\images %285%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\images %286%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Ubuntu_Update_manager_icon_v2_by_myc1034-300x300.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\download %289%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\683px-Schematicy-atom.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Window Performance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\images %287%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\WSM_gears_lg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\gear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\gear_256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\picto-energy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\129883-simple-red-square-icon-symbols-shapes-minimize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\129882-simple-red-square-icon-symbols-shapes-maximize-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\logo200-17510.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\intellogo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\home.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\home2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\blue.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\blue1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\home3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\cross.jpg" />
+    <Resource Include="Images\maximize.jpg" />
+    <Resource Include="Images\minimise.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ckt.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ckt2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ckt3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\statry_back.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\blue_gloss.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Hibernate_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\power.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Help1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Hibernate_button1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\power1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\microsoft___windows_8_logo_by_n_studios_2-d5keldy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\android_intel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ckt31.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ckt32.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\loading81.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\android-logo-pngoctober----2013----the-best-technology-for-the-future-dqqcr6gv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\molecule.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\options.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\designfloat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HouseButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\118236-matte-blue-and-white-square-icon-symbols-shapes-maximize-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\minimize_window.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\download %2811%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\close_window.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\download %2812%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\download %2811%291.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="IWshRuntimeLibrary">
+      <Guid>{F935DC20-1CF0-11D0-ADB9-00C04FD58A0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Shell32">
+      <Guid>{50A7E9B0-70EF-11D1-B75A-00A0C90564FE}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="IntelICON.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\IntelICON.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

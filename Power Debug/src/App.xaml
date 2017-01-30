@@ -1,0 +1,32 @@
+﻿<Application x:Class="PowerDebug.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <!-- This style applies to any Button on the page. -->
+        <Style TargetType="{x:Type Button}">
+            <Style.Triggers>
+
+                <!-- When the Button is pressed, apply the drop shadow. -->
+                <Trigger Property="IsPressed" Value="true">
+                    <Setter Property = "BitmapEffect" >
+                        <Setter.Value>
+                            <DropShadowBitmapEffect Color="Black" Direction="320"  
+               ShadowDepth="25" Softness="1" Opacity="0.5"/>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="Triggers" TargetType="{x:Type ComboBoxItem}">
+            <Style.Triggers>
+                <Trigger Property="ComboBoxItem.IsMouseOver" Value="true">
+                    <Setter Property = "Foreground" Value="Red"/>
+                    <Setter Property = "FontSize" Value="28"/>
+                    <Setter Property = "FontFamily" Value="Arial Bold"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Application.Resources>
+</Application>
