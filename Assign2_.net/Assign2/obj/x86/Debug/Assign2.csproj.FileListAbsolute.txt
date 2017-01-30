@@ -1,0 +1,8 @@
+H:\DotNet Programming\Assign2\Assign2\bin\Debug\Assign2.exe
+H:\DotNet Programming\Assign2\Assign2\bin\Debug\Assign2.pdb
+H:\DotNet Programming\Assign2\Assign2\obj\x86\Debug\Assign2.Form1.resources
+H:\DotNet Programming\Assign2\Assign2\obj\x86\Debug\Assign2.Properties.Resources.resources
+H:\DotNet Programming\Assign2\Assign2\obj\x86\Debug\Assign2.csproj.GenerateResource.Cache
+H:\DotNet Programming\Assign2\Assign2\obj\x86\Debug\Assign2.exe
+H:\DotNet Programming\Assign2\Assign2\obj\x86\Debug\Assign2.pdb
+H:\DotNet Programming\Assign2\Assign2\obj\x86\Debug\Assign2.csprojResolveAssemblyReference.cache
