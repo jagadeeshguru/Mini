@@ -1,0 +1,8 @@
+\\vm-vsweb.niunt.niu.edu\user$\z1784316\documents\visual studio 2010\Projects\Assign4\Assign4\bin\Debug\Assign4.exe
+\\vm-vsweb.niunt.niu.edu\user$\z1784316\documents\visual studio 2010\Projects\Assign4\Assign4\bin\Debug\Assign4.pdb
+\\vm-vsweb.niunt.niu.edu\user$\z1784316\documents\visual studio 2010\Projects\Assign4\Assign4\obj\x86\Debug\Assign4.Form1.resources
+\\vm-vsweb.niunt.niu.edu\user$\z1784316\documents\visual studio 2010\Projects\Assign4\Assign4\obj\x86\Debug\Assign4.Properties.Resources.resources
+\\vm-vsweb.niunt.niu.edu\user$\z1784316\documents\visual studio 2010\Projects\Assign4\Assign4\obj\x86\Debug\Assign4.csproj.GenerateResource.Cache
+\\vm-vsweb.niunt.niu.edu\user$\z1784316\documents\visual studio 2010\Projects\Assign4\Assign4\obj\x86\Debug\Assign4.exe
+\\vm-vsweb.niunt.niu.edu\user$\z1784316\documents\visual studio 2010\Projects\Assign4\Assign4\obj\x86\Debug\Assign4.pdb
+\\vm-vsweb.niunt.niu.edu\user$\z1784316\documents\visual studio 2010\Projects\Assign4\Assign4\obj\x86\Debug\Assign4.csprojResolveAssemblyReference.cache
